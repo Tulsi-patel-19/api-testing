@@ -3,7 +3,7 @@ import "dotenv/config";
 import cors from "cors";
 import axios from "axios";
 import connectToDB, { isMongoConnected } from "./config/db.js";
-import cacheRoutes from "./routes/cache.routes.js"
+import router from "./routes/cache.routes.js"
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -13,7 +13,7 @@ app.use(cors());
 
 connectToDB();
 
-app.use("/api",cacheRoutes);
+app.use("/api",router);
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
 });

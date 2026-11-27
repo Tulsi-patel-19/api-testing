@@ -1,4 +1,4 @@
- export default  isvalidHttpUrl = (req,res,next) =>{
+ const isvalidHttpUrl = (req,res,next) =>{
 
     const url = typeof req.body.url === "string" ? req.body.url.trim() :"";
 
@@ -27,3 +27,5 @@
         });
     }
 };
+
+export default isvalidHttpUrl;
