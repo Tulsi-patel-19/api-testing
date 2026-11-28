@@ -75,12 +75,12 @@ button, input {
   height: 8px;
   margin-right: 8px;
   border-radius: 50%;
-  background: #34d399;
+  /* background: #34d399; */
 }
 
-.status-dot.offline {
+/* .status-dot.offline {
   background: #f87171;
-}
+} */
 
 .main {
   max-width: 1600px;

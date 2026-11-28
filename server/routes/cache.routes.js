@@ -1,7 +1,7 @@
 import express from "express";
-import { getHealth ,getHistorySummary,getTestHistory,testExternalApi ,deleteCache} from "../controller/cache.controller.js";
+import { getHealth ,getHistorySummary,getTestHistory,testExternalApi ,deleteCache ,getcacheStates} from "../controller/cache.controller.js";
 import isvalidHttpUrl from "../middleware/url.middleware.js"
-import { getCacheStates } from "../services/cache.services.js";
+
 
 const router = express.Router();
 
@@ -22,7 +22,7 @@ router.post("/external",isvalidHttpUrl,testExternalApi);
  * GET /cache/stats
  * for get cache stats
  */
-router.get("/cache/stats",getCacheStates);
+router.get("/cache/stats",getcacheStates);
 
 /**
  * delete /cache

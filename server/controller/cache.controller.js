@@ -115,7 +115,7 @@ export const testExternalApi = async (req, res) => {
     }
 };
 
-export const getCacheStates = (req, res) => {
+export const getcacheStates = (req, res) => {
     res.json({
         success: true,
         stats: getCacheStates()
@@ -214,7 +214,7 @@ export const getHistorySummary = async (req, res) => {
                 $project: {
                     _id: 0,
                     totalTests: 1,
-                    totalHites: 1,
+                    totalHits: 1,
                     totalMisses: 1,
                     averageResponseTime: {
                         $round: ["$averageResponseTime", 2]
